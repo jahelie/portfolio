@@ -1,0 +1,287 @@
+/* TOUT LE PROJET */
+* {
+    /*permet d'inclure les marges autour d'un contenu dans les valeurs width et height*/
+    box-sizing: border-box;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* BANDEAU DE NAVIGATION TOP */
+
+    /*  overflow => si le contenu dépasse la boite prévue il est caché
+    position fixed => toujours visible sur la page
+    top = pas de marge en haut
+    width = prend 100% de la largeur de la page meme si vide*/
+nav {
+    overflow: hidden; 
+    background-color: #121820; /* bleu-noir profond */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5.25em;
+    margin:0,0,5em,0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+/* ELEMENTS DU BANDEAU DE NAVIGATION */
+
+    /*  float left = on part de la gauche et on les aligne horizontalement
+    padding c'est l'espace autour du contenu en dehors des marges qui sont derriere le contenu
+    textdeco enleve le style par defaut d'un lien par ex
+     */
+nav a {
+    float: left;
+    color: #e8e8e8; /* gris très clair */
+    text-align: center;
+    padding: 1.5em 1.5em;
+    text-decoration: none; 
+    font-size: 1.25em;
+}
+
+    /* En passant la souris dessus */
+nav a:hover {
+    background-color: #1b2530; /* gris bleuté foncé */
+    color: #ffffff;
+    transition: background-color 0.4s;
+}
+
+    /* pour le titre (et logo?) */
+nav a[class="titre_bandeau"]:hover {
+    background-color: #121820;
+    color: #aab3bd; /* gris bleuté doux */
+}
+
+/* si j'ai besoin de modifier : */
+/* nav a[class="titre_bandeau"] {
+    padding: 1.5em 1.5em;
+
+} */
+
+/* CORPS DU SITE*/
+
+ /* par défaut gris et tout contenu collé à gauche et droite sans marge*/ 
+body {
+    background-color: #e9ebee; /* gris bleuté très clair */
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* PIED DE PAGE */
+
+    /* pour l'instant je m'en sers pas */
+
+    /* footer {
+        background-color: #d9d9d9;
+        padding: 0px;
+    } */
+
+
+    
+.push_button {
+    background-color: #2e3a44; /* bleu-gris foncé */
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 3em 3em;
+    display: inline-block;
+    margin-right: 3em;
+    border-radius: 1em;
+}
+
+.push_button:active {
+    background-color: #242c33; /* ton plus sombre */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    padding: 3em 3em;
+    display: inline-block;
+    margin-right: 3em;
+    border-radius: 1em;
+}
+
+.push_button::selection {
+    background-color: #dcdcdc; /* gris clair pour la sélection */
+}
+
+/* CONTENU DE PAGE */
+
+main
+{
+    margin-top: 6em;
+}
+/* "CHAPITRES" DE PAGE */
+section {
+    background-color: #ffffff;
+    max-width: 100em;
+    margin: 1em auto;
+    padding: 3.5em;
+    border-radius: 1em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+
+/* IMAGES SEULES */
+img
+{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+}
+
+
+/* BLOC CONTENANT IMAGE */
+
+
+.image_container {
+   display: flex;
+    justify-content: center; 
+    align-items: center;     
+    flex-direction: column;  
+    
+}
+
+.image_container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2em;
+    
+
+}
+.image_droite {
+    float: right; /* fait flotter l'image à droite */
+    margin: 0 0 1em 2em; /* espace autour de l'image : haut/droite/bas/gauche */
+    max-width: 50%; /* ajuste la largeur de l'image par rapport au texte */
+}
+
+/* AFFICHAGE DE MEDIAS */
+    /* on affiche des colonnes media+legende, si besoin de 2x2 ou autre on fait des lignes de colonnes avec les lignes en parent */
+
+.media_ligne
+{
+    display: flex;              /* place les éléments côte à côte */
+    justify-content: center;    /* centre l'ensemble horizontalement */
+    align-items: stretch;     
+    flex-wrap: wrap;            /* permet de passer en colonne sur petits écrans */
+    gap: 10em;                   /* espace entre les deux éléments */
+    margin: 2em auto;
+    max-width: 100%;
+    
+}
+
+.media-colonne {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.media-colonne .media {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;       /* garde la même proportion pour les images et modèles */
+    border-radius: 0.5em;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: #f2f2f2;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.legende 
+{
+    margin-top: 0.5em;
+    color: #646262;
+    font-size: 0.9em;
+    text-align:center; 
+}
+
+
+model-viewer.media {
+    height: 91.8%;
+    min-height: 0;
+
+}
+
+/* TITRES */
+h1 {
+    font-size: 3em;
+    font-weight: 600;           
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #1b1b1b;             
+    letter-spacing: -0.5px;
+    text-align:center
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 0.9rem;
+    color: #2a2a2a;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    color: #333333;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.7rem;
+    color: #3a3a3a;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+    color: #4a4a4a;
+}
+
+h6 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+}
+
+/* PARAGRAPHES */
+p {
+    font-size: 1rem;          /* taille lisible pour le texte */
+    line-height: 1.6;         /* interligne confortable */
+    color: #4a4a4a;           /* gris doux pour moins de contraste */
+    margin-bottom: 1rem;      /* espace entre paragraphes */
+    text-align: justify;
+}
+/* LISTES */
+ul, ol {
+    margin: 1.2em 0 1.2em 2.5em; 
+    padding: 0;
+    color: #2c2c2c; 
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: justify;
+}
+li {
+    margin-bottom: 0.4em; 
+    padding-left: 0.2em;
+}
+li:hover {
+    color: #1a2b3a; 
+    transition: color 0.3s ease;
+}
+    /* listes imbriquées */
+ul ul, ol ol {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1.5em;
+    font-size: 0.95em;
+    color: #3a3a3a;
+}
