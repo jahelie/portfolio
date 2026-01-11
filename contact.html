@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<title>Contact & CV - Jahélie DUPLAIX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<header id="header">
+				<h1><a href="index.html">Jahélie</a> DUPLAIX</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="projets.html">Projets</a></li>
+						<li><a href="experiences.html">Expériences</a></li>
+						<li>
+							<a href="#" class="icon solid fa-angle-down">Compétences</a>
+							<ul>
+								<li><a href="generic.html">Conception</a></li>
+								<li><a href="contact.html">Analyse</a></li>
+								<li><a href="elements.html">Réalisation</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html" class="button">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section id="main" class="container">
+				<header>
+					<h2>Me contacter</h2>
+					<p>Retrouvez mes coordonnées et mon CV complet ci-dessous.</p>
+				</header>
+
+				<div class="contact-info-bar">
+					<div class="contact-item">
+						<span class="icon solid fa-envelope" style="margin-right: 8px;"></span>
+						<span id="email-place"></span>
+					</div>
+					<div class="contact-item">
+						<span class="icon solid fa-phone" style=" margin-right: 8px;"></span>
+						<span id="phone-place"></span>
+					</div>
+					<div class="contact-item">
+						<span class="icon brands fa-linkedin" style="margin-right: 8px;"></span>
+						<a href="https://linkedin.com/in/votreprofil" target="_blank">jahelie-duplaix</a>
+					</div>
+					<div class="contact-item">
+						<a href="media/pdf/CV_DUPLAIX_Jahélie.pdf" class="button alt small" download>Télécharger le CV</a>
+					</div>
+				</div>
+
+				<div class="cv-full-container">
+					<embed src="media/pdf/CV_DUPLAIX_Jahélie.pdf" type="application/pdf" />
+					
+					<div class="mobile-only-preview" style="display: none;">
+						<p>L'aperçu du CV n'est pas disponible sur votre appareil.</p>
+						<a href="media/pdf/CV_DUPLAIX_Jahélie.pdf" class="button">Télécharger le CV (PDF)</a>
+					</div>
+				</div>
+			</section>
+
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Jahélie DUPLAIX</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			var u = "jahelie.duplaix";
+			var d = "gmail.com"; // À remplacer par votre vrai domaine
+			var p = "07" + " 83" + " 33" + " 00" + " 97"; // À remplacer par votre vrai numéro
+
+			document.getElementById('email-place').innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>';
+			document.getElementById('phone-place').innerHTML = '<a href="tel:' + p.replace(/ /g, '') + '">' + p + '</a>';
+		</script>
+
+	</body>
+</html>
