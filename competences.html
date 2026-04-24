@@ -1,0 +1,656 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<head>
+    <title>Compétences - Jahélie DUPLAIX</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <style>
+        /* ── Blocs de compétences ── */
+        .comp-block { margin-bottom: 2.5em; }
+        .comp-block:last-child { margin-bottom: 0; }
+
+        .comp-header {
+            display: flex;
+            align-items: center;
+            gap: 0.7em;
+            padding: 0.65em 1.1em;
+            border-radius: 4px 4px 0 0;
+            color: #fff;
+            font-weight: 300;
+            font-size: 0.9em;
+            letter-spacing: 0.01em;
+        }
+        .comp-concevoir { background: #a81c1c; }
+        .comp-verifier  { background: #bf5010; }
+        .comp-maintenir { background: #b07800; }
+        .comp-implanter { background: #3d7a00; }
+
+        .comp-body {
+            border: 1px solid #e5e5e5;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            padding: 1em 1.3em;
+            background: #fff;
+        }
+
+        .ac-niveau-label {
+            font-size: 0.72em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #bbb;
+            margin: 1.2em 0 0.5em;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .ac-niveau-label:first-child { margin-top: 0; }
+
+        .ac-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75em;
+            padding: 0.6em 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .ac-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+        .ac-badge {
+            flex-shrink: 0;
+            font-size: 0.72em;
+            font-weight: 400;
+            padding: 0.25em 0.55em;
+            border-radius: 3px;
+            color: #fff;
+            white-space: nowrap;
+            margin-top: 0.15em;
+            letter-spacing: 0.03em;
+        }
+        .bg-concevoir { background: #a81c1c; }
+        .bg-verifier  { background: #bf5010; }
+        .bg-maintenir { background: #b07800; }
+        .bg-implanter { background: #3d7a00; }
+
+        .ac-content { flex: 1; min-width: 0; }
+        .ac-desc {
+            margin: 0 0 0.35em;
+            font-size: 0.88em;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .ac-proj-list { display: flex; flex-wrap: wrap; gap: 0.3em; }
+        .ac-proj-tag {
+            font-size: 0.72em;
+            padding: 0.18em 0.55em;
+            border-radius: 3px;
+            background: #fdf0eb;
+            color: #c0624a;
+            text-decoration: none;
+            border: 1px solid #e8b49e;
+            border-bottom: 1px solid #e8b49e;
+            transition: background 0.15s, color 0.15s;
+        }
+        .ac-proj-tag:hover { background: #f7d9cc; color: #a84832; border-bottom-color: #e8b49e; }
+
+        /* ── Grille technologies ── */
+        .tech-section { margin-bottom: 2em; }
+        .tech-section:last-child { margin-bottom: 0; }
+
+        .tech-section-title {
+            font-size: 0.72em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #bbb;
+            margin-bottom: 1em;
+            padding-bottom: 0.35em;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9em;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.45em;
+            width: 82px;
+        }
+
+        .tech-logo {
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: #f8f8f8;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+        }
+        .tech-logo i { font-size: 2.2em; }
+        .tech-logo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+
+        .tech-placeholder {
+            font-size: 0.6em;
+            font-weight: 400;
+            color: #bbb;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+            border: 1px dashed #ddd;
+            background: #f8f8f8;
+        }
+
+        .tech-name {
+            font-size: 0.72em;
+            color: #777;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.25;
+        }
+
+        @media screen and (max-width: 480px) {
+            .tech-grid { gap: 0.5em; }
+            .tech-item { width: 68px; }
+            .tech-logo { width: 44px; height: 44px; }
+            .tech-logo i { font-size: 1.8em; }
+            .ac-row { flex-direction: column; gap: 0.4em; }
+            .comp-body { padding: 0.8em; }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <header id="header">
+            <h1><a href="index.html">Jahélie</a> DUPLAIX</h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="experiences.html">Expériences</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="contact.html" class="button">Contact & CV</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="main" class="container">
+            <header>
+                <h2>Compétences</h2>
+                <p>BUT GEII · Parcours Électronique et Systèmes Embarqués — Référentiel national 2022</p>
+            </header>
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 SECTION 1 — Apprentissages Critiques
+            ════════════════════════════════════════════════════════════════ -->
+            <div class="box" style="margin-bottom: 2em;">
+                <h3 style="margin: 0 0 0.3em;">Apprentissages critiques</h3>
+                <p style="color: #999; font-size: 0.85em; margin-bottom: 1.8em;">
+                    Les badges <span style="background:#e6eef8; color:#1a4a88; border:1px solid #c0d0e8; padding:0.1em 0.4em; border-radius:2px; font-size:0.9em;">projets</span>
+                    renvoient vers les projets illustrant chaque apprentissage.
+                </p>
+
+                <!-- ── CONCEVOIR ── -->
+                <div class="comp-block">
+                    <div class="comp-header comp-concevoir">
+                        <span class="icon solid fa-drafting-compass"></span>
+                        C1 · Concevoir — Concevoir la partie GEII d'un système
+                    </div>
+                    <div class="comp-body">
+                        <div class="ac-niveau-label">Niveau 1 — Semestres 1 &amp; 2</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC11.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Produire une analyse fonctionnelle d'un système simple</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-0">Suiveur de ligne</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-3">Capteur de température</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC11.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Réaliser un prototype pour des solutions techniques matériel et/ou logiciel</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-0">Suiveur de ligne</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC11.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Rédiger un dossier de fabrication à partir d'un dossier de conception</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="ac-niveau-label">Niveau 2 — Semestres 3 &amp; 4</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC21.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Proposer des solutions techniques liées à l'analyse fonctionnelle</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-2">Fish'n'chip 2</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-4">Tracker de lumière</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC21.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Dérisquer les solutions techniques retenues</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-4">Tracker de lumière</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ac-niveau-label">Niveau 3 — Semestres 5 &amp; 6</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC31.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Contribuer à la rédaction d'un cahier des charges</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC31.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Prouver la pertinence de ses choix technologiques</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-concevoir">AC31.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Rédiger un dossier de conception</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── VÉRIFIER ── -->
+                <div class="comp-block">
+                    <div class="comp-header comp-verifier">
+                        <span class="icon solid fa-vial"></span>
+                        C2 · Vérifier — Vérifier la partie GEII d'un système
+                    </div>
+                    <div class="comp-body">
+                        <div class="ac-niveau-label">Niveau 1 — Semestres 1 &amp; 2</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC12.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Appliquer une procédure d'essais</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC12.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Identifier un dysfonctionnement</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-0">Suiveur de ligne</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-2">Fish'n'chip 2</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC12.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Décrire un dysfonctionnement</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-0">Suiveur de ligne</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-3">Capteur de température</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ac-niveau-label">Niveau 2 — Semestres 3 &amp; 4</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC22.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Identifier les tests et mesures à mettre en place pour valider le fonctionnement d'un système</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-2">Fish'n'chip 2</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-3">Capteur de température</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC22.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Certifier le fonctionnement d'un nouvel équipement industriel</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="ac-niveau-label">Niveau 3 — Semestres 5 &amp; 6</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC32.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Évaluer la cause racine d'un dysfonctionnement</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-2">Fish'n'chip 2</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-4">Tracker de lumière</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC32.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Proposer une solution corrective à un dysfonctionnement</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-4">Tracker de lumière</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-verifier">AC32.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Produire une procédure d'essais pour valider la conformité d'un système</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── MAINTENIR ── -->
+                <div class="comp-block">
+                    <div class="comp-header comp-maintenir">
+                        <span class="icon solid fa-tools"></span>
+                        C3 · Maintenir — Assurer le maintien en condition opérationnelle d'un système
+                    </div>
+                    <div class="comp-body">
+                        <div class="ac-niveau-label">Niveau 1 — Semestres 3 &amp; 4</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC23.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Exécuter l'entretien et le contrôle d'un système en respectant une procédure</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC23.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Exécuter une opération de maintenance (corrective, préventive, améliorative)</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC23.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Diagnostiquer un dysfonctionnement dans un système</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC23.04</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Identifier la cause racine du dysfonctionnement</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="ac-niveau-label">Niveau 2 — Semestres 5 &amp; 6</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC33.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Proposer une solution de maintenance</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC33.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Évaluer les coûts d'indisponibilité et de maintenance d'un système</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC33.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Produire une procédure de maintenance</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-maintenir">AC33.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Proposer un appui technique aux différents acteurs à l'échelle nationale et internationale</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── IMPLANTER ESE ── -->
+                <div class="comp-block" style="margin-bottom:0;">
+                    <div class="comp-header comp-implanter">
+                        <span class="icon solid fa-microchip"></span>
+                        C4 · Implanter (ESE) — Implanter un système matériel ou logiciel
+                    </div>
+                    <div class="comp-body">
+                        <div class="ac-niveau-label">Niveau 1 — Semestres 3 &amp; 4</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-implanter">AC24.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Appliquer une procédure de fabrication pour implanter les composants matériels et/ou logiciels dans un système</p>
+                                <div class="ac-proj-list">
+                                    <a class="ac-proj-tag" href="projets.html#projet-2">Fish'n'chip 2</a>
+                                    <a class="ac-proj-tag" href="projets.html#projet-1">Robot labyrinthe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-implanter">AC24.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Évaluer la conformité du système</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+
+                        <div class="ac-niveau-label">Niveau 2 — Semestres 5 &amp; 6</div>
+
+                        <div class="ac-row">
+                            <span class="ac-badge bg-implanter">AC34.01</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Produire une procédure d'installation et de mise en service d'un système</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-implanter">AC34.02</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Exécuter la mise en service d'un système en respectant la procédure</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                        <div class="ac-row">
+                            <span class="ac-badge bg-implanter">AC34.03</span>
+                            <div class="ac-content">
+                                <p class="ac-desc">Produire le dossier de conformité du système en gérant le versionnage</p>
+                                <div class="ac-proj-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /box AC -->
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 SECTION 2 — Technologies & Outils
+            ════════════════════════════════════════════════════════════════ -->
+            <div class="box">
+                <h3 style="margin: 0 0 0.3em;">Technologies &amp; Outils</h3>
+                <p style="color: #999; font-size: 0.85em; margin-bottom: 2em;">
+                    Langages, logiciels et environnements utilisés au cours du BUT GEII.
+                </p>
+
+                <!-- Langages -->
+                <div class="tech-section">
+                    <div class="tech-section-title">Langages de programmation</div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo">
+                                <i class="devicon-c-plain colored"></i>
+                            </div>
+                            <span class="tech-name">C</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">
+                                <i class="devicon-cplusplus-plain colored"></i>
+                            </div>
+                            <span class="tech-name">C++</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">
+                                <i class="devicon-python-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDA & CAO -->
+                <div class="tech-section">
+                    <div class="tech-section-title">EDA &amp; CAO</div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo tech-placeholder">
+                                KiCAD
+                            </div>
+                            <span class="tech-name">KiCAD</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo tech-placeholder">
+                                Fusion 360
+                            </div>
+                            <span class="tech-name">Fusion 360</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environnements & outils -->
+                <div class="tech-section">
+                    <div class="tech-section-title">Environnements &amp; outils</div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo">
+                                <i class="devicon-arduino-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Arduino</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo tech-placeholder">
+                                MPLAB X
+                            </div>
+                            <span class="tech-name">MPLAB X IDE</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">
+                                <i class="devicon-matplotlib-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Matplotlib</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">
+                                <i class="devicon-git-plain colored"></i>
+                            </div>
+                            <span class="tech-name">Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instrumentation -->
+                <div class="tech-section">
+                    <div class="tech-section-title">Instrumentation</div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo tech-placeholder">
+                                OSCIL.
+                            </div>
+                            <span class="tech-name">Oscilloscope</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo tech-placeholder">
+                                AN. LOG.
+                            </div>
+                            <span class="tech-name">Analyseur logique</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo tech-placeholder">
+                                DMM
+                            </div>
+                            <span class="tech-name">Multimètre</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences transversales -->
+                <div class="tech-section">
+                    <div class="tech-section-title">Compétences transversales</div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo">
+                                <img src="images/logos/logo_toeic.png" alt="TOEIC">
+                            </div>
+                            <span class="tech-name">Anglais (TOEIC)</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo tech-placeholder">
+                                PROJET VOLTAIRE
+                            </div>
+                            <span class="tech-name">Projet Voltaire</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /box tech -->
+
+        </section>
+
+        <footer id="footer">
+            <ul class="copyright">
+                <p>Design: HTML5 UP &amp; Jahélie DUPLAIX</p>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
