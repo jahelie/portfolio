@@ -4718,7 +4718,7 @@ header.major h2:after {
 
 .accordion-header h3 { margin: 0; font-size: 1.25em; color: #222; font-weight: 600; }
 
-.header-info .company { display: block; font-size: 0.9em; color: #49b5c2; font-weight: 500; margin-top: 0.2em; }
+.header-info .company { display: block; font-size: 0.9em; color: #b85c38; font-weight: 500; margin-top: 0.2em; }
 .header-meta .date { font-size: 0.82em; color: #aaa; font-style: italic; }
 
 .header-meta { display: flex; align-items: center; gap: 1.5em; }
@@ -4736,7 +4736,7 @@ header.major h2:after {
 .inner-content p { font-size: 0.95em; line-height: 1.7; color: #555; }
 .inner-content ul { margin: 0.8em 0 0; padding-left: 1.2em; }
 .inner-content ul li { font-size: 0.92em; color: #555; line-height: 1.7; padding: 0.1em 0; }
-.inner-content ul li::marker { color: #49b5c2; }
+.inner-content ul li::marker { color: #b85c38; }
 
 /* État déplié */
 .accordion-item.active { border-color: #ccc2bd; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
@@ -4746,7 +4746,7 @@ header.major h2:after {
     transition: max-height 0.4s ease-in;
 }
 
-.accordion-item.active .icon { transform: rotate(180deg); color: #49b5c2; }
+.accordion-item.active .icon { transform: rotate(180deg); color: #b85c38; }
 
 /* Badges pour les compétences techniques */
 .badge { 
@@ -5027,7 +5027,7 @@ header.major h2:after {
     font-size: 0.72em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #49b5c2;
+    color: #b85c38;
     font-weight: 600;
     margin: 0 0 0.4em;
     display: block;
@@ -5051,12 +5051,12 @@ header.major h2:after {
 /* Badges technos */
 #lightbox .tech-badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.1rem; }
 #lightbox .tech-badge {
-    background: #f0fafc;
-    border: 1px solid #c5e8ec;
+    background: #fdf0eb;
+    border: 1px solid #e8c5b0;
     border-radius: 4px;
     padding: 0.2em 0.65em;
     font-size: 0.78em;
-    color: #2a8a96;
+    color: #9e4a28;
     font-weight: 500;
 }
 
@@ -5071,8 +5071,8 @@ header.major h2:after {
     border-bottom: solid 1px #f5f5f5;
 }
 #lightbox .ac-list li:last-child { border-bottom: none; }
-#lightbox .ac-list li::before { content: "›"; position: absolute; left: 0; color: #49b5c2; }
-#lightbox .ac-code { color: #49b5c2; font-weight: 600; margin-right: 0.35em; font-size: 0.95em; }
+#lightbox .ac-list li::before { content: "›"; position: absolute; left: 0; color: #b85c38; }
+#lightbox .ac-code { color: #b85c38; font-weight: 600; margin-right: 0.35em; font-size: 0.95em; }
 
 /* Liens bas */
 #lightbox .lb-links {
