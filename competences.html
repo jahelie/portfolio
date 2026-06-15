@@ -157,6 +157,35 @@
             line-height: 1.25;
         }
 
+        /* ── Onglets compétences ── */
+        .comp-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin-bottom: 1.8em;
+        }
+        .comp-tab {
+            flex: 1 1 auto;
+            padding: 0.65em 1em;
+            border: 2px solid var(--tab-color);
+            border-radius: 4px;
+            background: #fff;
+            color: var(--tab-color);
+            font-size: 0.82em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            text-align: center;
+        }
+        .comp-tab:hover {
+            background: var(--tab-color);
+            color: #fff;
+        }
+        .comp-tab.active {
+            background: var(--tab-color);
+            color: #fff;
+        }
+
         @media screen and (max-width: 480px) {
             .tech-grid { gap: 0.5em; }
             .tech-item { width: 68px; }
@@ -200,8 +229,24 @@
                     renvoient vers les projets illustrant chaque apprentissage.
                 </p>
 
+                <!-- ── ONGLETS ── -->
+                <nav class="comp-tabs">
+                    <button class="comp-tab active" data-target="block-concevoir" style="--tab-color:#a81c1c">
+                        <span class="icon solid fa-drafting-compass"></span> C1 · Concevoir
+                    </button>
+                    <button class="comp-tab" data-target="block-verifier" style="--tab-color:#bf5010">
+                        <span class="icon solid fa-vial"></span> C2 · Vérifier
+                    </button>
+                    <button class="comp-tab" data-target="block-maintenir" style="--tab-color:#b07800">
+                        <span class="icon solid fa-tools"></span> C3 · Maintenir
+                    </button>
+                    <button class="comp-tab" data-target="block-implanter" style="--tab-color:#3d7a00">
+                        <span class="icon solid fa-microchip"></span> C4 · Implanter
+                    </button>
+                </nav>
+
                 <!-- ── CONCEVOIR ── -->
-                <div class="comp-block">
+                <div class="comp-block" id="block-concevoir">
                     <div class="comp-header comp-concevoir">
                         <span class="icon solid fa-drafting-compass"></span>
                         C1 · Concevoir — Concevoir la partie GEII d'un système
@@ -291,7 +336,7 @@
                 </div>
 
                 <!-- ── VÉRIFIER ── -->
-                <div class="comp-block">
+                <div class="comp-block" id="block-verifier" style="display:none">
                     <div class="comp-header comp-verifier">
                         <span class="icon solid fa-vial"></span>
                         C2 · Vérifier — Vérifier la partie GEII d'un système
@@ -382,7 +427,7 @@
                 </div>
 
                 <!-- ── MAINTENIR ── -->
-                <div class="comp-block">
+                <div class="comp-block" id="block-maintenir" style="display:none">
                     <div class="comp-header comp-maintenir">
                         <span class="icon solid fa-tools"></span>
                         C3 · Maintenir — Assurer le maintien en condition opérationnelle d'un système
@@ -453,7 +498,7 @@
                 </div>
 
                 <!-- ── IMPLANTER ESE ── -->
-                <div class="comp-block" style="margin-bottom:0;">
+                <div class="comp-block" id="block-implanter" style="display:none;margin-bottom:0;">
                     <div class="comp-header comp-implanter">
                         <span class="icon solid fa-microchip"></span>
                         C4 · Implanter (ESE) — Implanter un système matériel ou logiciel
@@ -652,5 +697,15 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.comp-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.comp-tab').forEach(function(t) { t.classList.remove('active'); });
+                document.querySelectorAll('.comp-block').forEach(function(b) { b.style.display = 'none'; });
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.target).style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>

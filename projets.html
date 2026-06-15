@@ -38,72 +38,76 @@
             ════════════════════════════════════════════════════════════════ -->
             <div class="row">
 
-                <!-- ── 1. Suiveur de ligne ── -->
+                <!-- ── 1. Bras robotisé PTUT ── -->
                 <div class="col-4 col-12-mobile">
                     <div class="box project-card">
-                        <img class="card-thumb" src="images/projets/suiveur_ligne.jpg" alt="Suiveur de ligne analogique">
-                        <div class="card-caption">Suiveur de ligne analogique</div>
+                        <img class="card-thumb" src="images/projets/bras_robot.jpg" alt="Bras robotisé Bluetooth">
+                        <div class="card-caption">Bras robotisé Bluetooth</div>
                     </div>
 
                     <div class="project-content">
                         <div class="lb-layout">
 
-                            <!-- Visuels -->
                             <div class="lb-visual">
                                 <div class="lb-gallery">
-                                    <img src="images/projets/suiveur_ligne.jpg" alt="Robot suiveur de ligne">
-                                    <!-- Ajoutez une 3e image si besoin -->
+                                    <img src="images/projets/bras_robot.jpg" alt="Bras robotisé">
                                 </div>
+                                <p class="lb-visual-hint">Cliquez sur une image pour l'agrandir</p>
                             </div>
 
-                            <!-- Texte -->
                             <div class="lb-info">
                                 <div class="lb-section">
-                                    <h3 class="lb-title">Suiveur de ligne analogique</h3>
-                                    <p class="lb-subtitle">Projet BUT1 - Électronique analogique</p>
+                                    <h3 class="lb-title">Bras robotisé Bluetooth</h3>
+                                    <p class="lb-subtitle">Projet tuteuré BUT2 S3 — Robotique et systèmes embarqués · Équipe : Duplaix, Saussier, Wawer</p>
                                 </div>
 
                                 <div class="lb-section">
                                     <span class="lb-label">Contexte</span>
-                                    <p>Robot suiveur de ligne réalisé en première année de BUT GEII. L'objectif était de concevoir
-                                       la carte de commande de la maquette, en utilisant uniquement de l'électronique analogique.</p>
+                                    <p>Conception complète d'un bras robotisé articulé imprimé en 3D, piloté à distance via une manette Bluetooth. Le bras est capable de positionner précisément sa pince dans un plan et de soulever un verre d'eau. Le système se compose de deux sous-ensembles : le bras (alimenté en 24 V secteur) et la manette (autonome sur batterie LiPo, avec joysticks, encodeur et écran OLED).</p>
                                 </div>
 
                                 <div class="lb-section">
                                     <span class="lb-label">Choix techniques</span>
-                                    <p>La détection de ligne est assurée par des capteurs infrarouges dont le signal
-                                       analogique est comparé à un seuil à l'aide d'AOPs.
-                                       Le signal en "tout ou rien" est ensuite envoyé vers des drivers DC qui ajustent la vitesse des moteurs.</p>
+                                    <p>Architecture multicartes (carte principale MCU + Bluetooth, carte de puissance, carte de conversion 24 V → 5 V, module reset Z). Moteurs pas-à-pas pilotés par drivers DRV8825 via signaux STEP/DIR, servomoteurs commandés en PWM. Communication sans fil par module HC-05 (UART). Cinématique directe planaire (ρ, z) calculée dans le firmware pour positionner la pince.</p>
                                 </div>
 
                                 <div class="lb-section">
                                     <span class="lb-label">Réalisations</span>
                                     <div class="tech-badges">
-                                        <span class="tech-badge">Design schématique</span>
-                                        <span class="tech-badge">Routage PCB</span>
-                                        <span class="tech-badge">Soudure</span>
-                                        <span class="tech-badge">Tests & réglages</span>
+                                        <span class="tech-badge">Modélisation 3D (Fusion 360)</span>
+                                        <span class="tech-badge">Impression 3D</span>
+                                        <span class="tech-badge">Design schématique (4 cartes)</span>
+                                        <span class="tech-badge">Routage PCB (KiCad)</span>
+                                        <span class="tech-badge">Firmware C / STM32 HAL</span>
+                                        <span class="tech-badge">Bluetooth HC-05</span>
+                                        <span class="tech-badge">Bilan thermique DRV8825</span>
                                     </div>
                                 </div>
 
                                 <div class="lb-section">
                                     <span class="lb-label">Technologies & outils</span>
                                     <div class="tech-badges">
-                                        <span class="tech-badge">Capteurs IR</span>
-                                        <span class="tech-badge">Moteurs DC</span>
-                                        <span class="tech-badge">KiCAD</span>
+                                        <span class="tech-badge">STM32F103 / F303</span>
+                                        <span class="tech-badge">C embarqué</span>
+                                        <span class="tech-badge">STM32CubeIDE</span>
+                                        <span class="tech-badge">KiCad</span>
+                                        <span class="tech-badge">Fusion 360</span>
+                                        <span class="tech-badge">DRV8825</span>
+                                        <span class="tech-badge">HC-05</span>
+                                        <span class="tech-badge">PWM / UART / I2C</span>
                                     </div>
                                 </div>
 
                                 <div class="lb-section">
                                     <span class="lb-label">Compétences</span>
                                     <ul class="ac-list">
-                                        <li><span class="ac-code">AC11.01</span> Produire une analyse fonctionnelle d'un système simple</li>
-                                        <li><span class="ac-code">AC12.02</span> Identifier un dysfonctionnement</li>
-                                        <li><span class="ac-code">AC12.03</span> Décrire un dysfonctionnement</li>
+                                        <li><span class="ac-code">AC21.01</span> Proposer des solutions techniques liées à l'analyse fonctionnelle</li>
+                                        <li><span class="ac-code">AC21.02</span> Dérisquer les solutions techniques retenues</li>
+                                        <li><span class="ac-code">AC31.02</span> Prouver la pertinence de ses choix technologiques</li>
+                                        <li><span class="ac-code">AC22.01</span> Identifier les tests et mesures à mettre en place pour valider un système</li>
+                                        <li><span class="ac-code">AC24.01</span> Appliquer une procédure de fabrication pour implanter les composants</li>
                                     </ul>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -131,6 +135,7 @@
                                     </model-viewer>
                                     <!-- Images complémentaires sous la vue 3D -->
                                     <img src="images/projets/robot_labyrinthe.jpg" alt="Robot en situation — à remplacer">
+                                    <img src="images/projets/robot_labyrinthe_organigramme.png" alt="Organigramme robot labyrinthe">
                                 </div>
                                 <p class="lb-visual-hint">Glissez sur le modèle 3D · Cliquez sur les photos pour les agrandir</p>
                             </div>
@@ -292,8 +297,7 @@
 
                             <div class="lb-visual">
                                 <div class="lb-gallery">
-                                    <img src="images/projets/capteur_temperature.jpg" alt="Montage capteur — à remplacer">
-                                    <img src="images/projets/capteur_temperature.jpg" alt="Courbe de mesure — à remplacer">
+                                    <img src="images/projets/capteur_temperature.jpg" alt="Capteur de température">
                                 </div>
                                 <p class="lb-visual-hint">Cliquez sur une image pour l'agrandir</p>
                             </div>
@@ -363,8 +367,7 @@
 
                             <div class="lb-visual">
                                 <div class="lb-gallery">
-                                    <img src="images/projets/tracker_lumiere.jpg" alt="Mécanisme tracker — à remplacer">
-                                    <img src="images/projets/tracker_lumiere.jpg" alt="Schéma asservissement — à remplacer">
+                                    <img src="images/projets/tracker_lumiere.jpg" alt="Tracker de lumière">
                                 </div>
                                 <p class="lb-visual-hint">Cliquez sur une image pour l'agrandir</p>
                             </div>
@@ -488,6 +491,158 @@
                 </div>
 
             </div><!-- /row 2 -->
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 GRILLE — rangée 3
+            ════════════════════════════════════════════════════════════════ -->
+            <div class="row">
+
+                <!-- ── 7. Suiveur de ligne ── -->
+                <div class="col-4 col-12-mobile">
+                    <div class="box project-card">
+                        <img class="card-thumb" src="images/projets/suiveur_ligne.jpg" alt="Suiveur de ligne analogique">
+                        <div class="card-caption">Suiveur de ligne analogique</div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="lb-layout">
+
+                            <!-- Visuels -->
+                            <div class="lb-visual">
+                                <div class="lb-gallery">
+                                    <img src="images/projets/suiveur_ligne.jpg" alt="Robot suiveur de ligne">
+                                </div>
+                            </div>
+
+                            <!-- Texte -->
+                            <div class="lb-info">
+                                <div class="lb-section">
+                                    <h3 class="lb-title">Suiveur de ligne analogique</h3>
+                                    <p class="lb-subtitle">Projet BUT1 - Électronique analogique</p>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Contexte</span>
+                                    <p>Robot suiveur de ligne réalisé en première année de BUT GEII. L'objectif était de concevoir
+                                       la carte de commande de la maquette, en utilisant uniquement de l'électronique analogique.</p>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Choix techniques</span>
+                                    <p>La détection de ligne est assurée par des capteurs infrarouges dont le signal
+                                       analogique est comparé à un seuil à l'aide d'AOPs.
+                                       Le signal en "tout ou rien" est ensuite envoyé vers des drivers DC qui ajustent la vitesse des moteurs.</p>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Réalisations</span>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge">Design schématique</span>
+                                        <span class="tech-badge">Routage PCB</span>
+                                        <span class="tech-badge">Soudure</span>
+                                        <span class="tech-badge">Tests & réglages</span>
+                                    </div>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Technologies & outils</span>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge">Capteurs IR</span>
+                                        <span class="tech-badge">Moteurs DC</span>
+                                        <span class="tech-badge">KiCAD</span>
+                                    </div>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Compétences</span>
+                                    <ul class="ac-list">
+                                        <li><span class="ac-code">AC11.01</span> Produire une analyse fonctionnelle d'un système simple</li>
+                                        <li><span class="ac-code">AC12.02</span> Identifier un dysfonctionnement</li>
+                                        <li><span class="ac-code">AC12.03</span> Décrire un dysfonctionnement</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── 8. Ascenseur FPGA ── -->
+                <div class="col-4 col-12-mobile">
+                    <div class="box project-card">
+                        <img class="card-thumb" src="images/projets/ascenseur_fpga.jpg" alt="Contrôleur d'ascenseur sur FPGA">
+                        <div class="card-caption">Contrôleur d'ascenseur sur FPGA</div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="lb-layout">
+
+                            <div class="lb-visual">
+                                <div class="lb-gallery">
+                                    <img src="images/projets/ascenseur_fpga.jpg" alt="Carte DE10-Lite avec afficheurs 7 segments">
+                                </div>
+                            </div>
+
+                            <div class="lb-info">
+                                <div class="lb-section">
+                                    <h3 class="lb-title">Contrôleur d'ascenseur sur FPGA</h3>
+                                    <p class="lb-subtitle">Projet tutoré BUT1 GEII — Électronique numérique · FPGA Intel MAX 10</p>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Contexte</span>
+                                    <p>Réalisation complète d'un contrôleur d'ascenseur (RDC ↔ 1er étage) entièrement en logique câblée sur FPGA Intel MAX 10 (carte DE10-Lite), sans microcontrôleur ni programme séquentiel. Toute l'intelligence repose sur des machines à états finis et de la logique combinatoire synthétisées matériellement sous Quartus Prime.</p>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Choix techniques</span>
+                                    <p>Architecture modulaire en 6 fonctions (FP1–FP6) : diviseur de fréquence (compteurs modulo 16/48 en Verilog), machine à 8 états pour l'ascenseur codée sur 3 bascules, mémorisation des appuis boutons, commande d'un moteur pas à pas 4 phases, et pilotage de 5 afficheurs 7 segments via multiplexeurs. L'arrêt d'urgence est implémenté par gel de la base de temps (sans état dédié), ce qui préserve le décompte restant.</p>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Réalisations</span>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge">Saisie de schéma hiérarchique</span>
+                                        <span class="tech-badge">Machines à états (8, 4, 2 états)</span>
+                                        <span class="tech-badge">Division de fréquence</span>
+                                        <span class="tech-badge">Commande moteur pas à pas</span>
+                                        <span class="tech-badge">Affichage 7 segments</span>
+                                        <span class="tech-badge">Simulation par chronogrammes</span>
+                                    </div>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Technologies & outils</span>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge">FPGA Intel MAX 10</span>
+                                        <span class="tech-badge">Quartus Prime 17.0</span>
+                                        <span class="tech-badge">Verilog</span>
+                                        <span class="tech-badge">VHDL</span>
+                                        <span class="tech-badge">DE10-Lite</span>
+                                        <span class="tech-badge">Logique LPM</span>
+                                    </div>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Résultats</span>
+                                    <p>Synthèse réussie : 44 éléments logiques sur 49 760 (&lt; 1 %), 18 registres, 55 broches E/S. Aucun bloc mémoire ni PLL utilisé.</p>
+                                </div>
+
+                                <div class="lb-section">
+                                    <span class="lb-label">Compétences</span>
+                                    <ul class="ac-list">
+                                        <li><span class="ac-code">AC11.01</span> Produire une analyse fonctionnelle d'un système simple</li>
+                                        <li><span class="ac-code">AC11.02</span> Proposer des solutions techniques liées à l'analyse fonctionnelle</li>
+                                        <li><span class="ac-code">AC12.01</span> Vérifier le fonctionnement d'un système par simulation</li>
+                                        <li><span class="ac-code">AC14.01</span> Appliquer une procédure de fabrication pour réaliser un système</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /row 3 -->
 
         </section>
 
