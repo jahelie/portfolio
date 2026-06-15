@@ -4958,6 +4958,7 @@ header.major h2:after {
     gap: 4px;
     padding: 0.7rem;
     min-height: 0;
+    overflow-y: auto;
 }
 
 /* Galerie photos empilées */
@@ -4996,6 +4997,15 @@ header.major h2:after {
     font-style: italic;
     margin: 0.2rem 0 0;
     flex-shrink: 0;
+}
+#lightbox .lb-video {
+    width: 100%;
+    margin-top: 0.8rem;
+    border-radius: 6px;
+    display: block;
+    max-height: 260px;
+    object-fit: contain;
+    background: #000;
 }
 
 /* ── Colonne droite : texte ── */
@@ -5073,6 +5083,7 @@ header.major h2:after {
 #lightbox .ac-list li:last-child { border-bottom: none; }
 #lightbox .ac-list li::before { content: "›"; position: absolute; left: 0; color: #b85c38; }
 #lightbox .ac-code { color: #b85c38; font-weight: 600; margin-right: 0.35em; font-size: 0.95em; }
+#lightbox .ac-comp { font-size: 0.75em; color: #aaa; font-style: italic; font-weight: 400; margin-right: 0.4em; }
 
 /* Liens bas */
 #lightbox .lb-links {

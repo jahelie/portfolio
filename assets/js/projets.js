@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /* ✅ CLONAGE DU CONTENU (styles Alpha OK) */
         const clone = content.cloneNode(true);
+        clone.querySelectorAll('video').forEach(v => { v.muted = true; });
         container.appendChild(clone);
 
         /* bouton fermeture ✕ */
